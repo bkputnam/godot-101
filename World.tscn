@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bakfutpxvg5c0"]
+
+[ext_resource type="Script" path="res://World.gd" id="1_0rjqh"]
+[ext_resource type="PackedScene" uid="uid://dqeqnswp1ib30" path="res://Player/Player.tscn" id="1_7ffxg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6xfc"]
+size = Vector2(274, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ih688"]
+size = Vector2(1047.2, 213.662)
+
+[node name="World" type="Node2D"]
+position = Vector2(47, 7.99997)
+scale = Vector2(3.72325, 5.08194)
+script = ExtResource("1_0rjqh")
+
+[node name="Player" parent="." instance=ExtResource("1_7ffxg")]
+position = Vector2(65, 50)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(150, 100)
+shape = SubResource("RectangleShape2D_g6xfc")
+
+[node name="Panel" type="Panel" parent="StaticBody2D"]
+offset_left = 13.0
+offset_top = 83.0
+offset_right = 287.0
+offset_bottom = 117.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DeathZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(177.13, 256.022)
+shape = SubResource("RectangleShape2D_ih688")
+
+[connection signal="body_entered" from="DeathZone" to="." method="_on_death_zone_body_entered"]

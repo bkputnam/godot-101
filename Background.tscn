@@ -1,0 +1,97 @@
+[gd_scene load_steps=9 format=3 uid="uid://5iq7fmkod1ej"]
+
+[ext_resource type="Script" path="res://ParallaxBackground.gd" id="1_51aui"]
+[ext_resource type="Texture2D" uid="uid://buvvrjwvdkwd0" path="res://Sunny-land-files/Graphical Assets/environment/Background/back.png" id="1_nlpwa"]
+[ext_resource type="Texture2D" uid="uid://busr421o8omwd" path="res://Sunny-land-files/Graphical Assets/environment/Background/middle.png" id="2_x6sjm"]
+[ext_resource type="Texture2D" uid="uid://bh7o8kt4j43uj" path="res://Sunny-land-files/Graphical Assets/environment/Props/house.png" id="4_uu52c"]
+[ext_resource type="Texture2D" uid="uid://dtftok8ywyr57" path="res://Sunny-land-files/Graphical Assets/environment/Props/palm.png" id="5_weedy"]
+[ext_resource type="Texture2D" uid="uid://ctmeejtlouev" path="res://Sunny-land-files/Graphical Assets/environment/Props/pine.png" id="6_qjopd"]
+[ext_resource type="Texture2D" uid="uid://cfpv1hgv6huf4" path="res://Sunny-land-files/Graphical Assets/environment/Props/plant-house.png" id="7_2wyu2"]
+[ext_resource type="Texture2D" uid="uid://b6u4vhju3sqs0" path="res://Sunny-land-files/Graphical Assets/environment/Props/rock-1.png" id="8_6o00n"]
+
+[node name="Background" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_51aui")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1230, 0)
+
+[node name="Back" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(647.5, 325.5)
+scale = Vector2(3.36198, 2.6875)
+texture = ExtResource("1_nlpwa")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(3, 14)
+motion_mirroring = Vector2(1210, 0)
+
+[node name="Middle" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(87, 470)
+texture = ExtResource("2_x6sjm")
+
+[node name="Middle2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(263, 470)
+texture = ExtResource("2_x6sjm")
+
+[node name="Middle3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(439, 470)
+texture = ExtResource("2_x6sjm")
+
+[node name="Middle4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(615, 470)
+texture = ExtResource("2_x6sjm")
+
+[node name="Middle5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(791, 470)
+texture = ExtResource("2_x6sjm")
+
+[node name="Middle6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(967, 470)
+texture = ExtResource("2_x6sjm")
+
+[node name="Middle7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1143, 470)
+texture = ExtResource("2_x6sjm")
+
+[node name="Middle8" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1319, 470)
+texture = ExtResource("2_x6sjm")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.2, 1.2)
+
+[node name="House3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+z_index = -1
+position = Vector2(296, 595)
+texture = ExtResource("4_uu52c")
+
+[node name="House2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+z_index = -2
+position = Vector2(226.5, 595)
+texture = ExtResource("4_uu52c")
+
+[node name="House" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(42, 593)
+texture = ExtResource("4_uu52c")
+
+[node name="Palm" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(114.5, 561)
+texture = ExtResource("5_weedy")
+
+[node name="Pine" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(161, 582)
+texture = ExtResource("6_qjopd")
+
+[node name="House4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(365, 593)
+texture = ExtResource("4_uu52c")
+
+[node name="Plant-house" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(542.5, 596.5)
+texture = ExtResource("7_2wyu2")
+
+[node name="Rock-1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(602.5, 630.5)
+texture = ExtResource("8_6o00n")
